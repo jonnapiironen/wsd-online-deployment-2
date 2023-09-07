@@ -1,6 +1,11 @@
 import { serve } from "./deps.js";
 import { configure, renderFile } from "./deps.js";
 
+const data = {
+    count: 0,
+  };
+  
+
 const handleRequest = async (request) => {
     const url = new URL(request.url);
     if (url.pathname === "/visits") {
